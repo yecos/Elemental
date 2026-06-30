@@ -15,13 +15,32 @@ export const useLanguage = create<LanguageState>()(
   persist(
     (set) => ({
       language: "es",
-      setLanguage: (lang) => set({ language: lang }),
+      setLanguage: (lang) => {
+        set({ language: lang });
+        // Update <html lang> for accessibility + SEO
+        if (typeof document !== "undefined") {
+          document.documentElement.lang = lang === "es" ? "es" : "en";
+        }
+      },
       toggle: () =>
-        set((state) => ({ language: state.language === "es" ? "en" : "es" })),
+        set((state) => {
+          const next = state.language === "es" ? "en" : "es";
+          if (typeof document !== "undefined") {
+            document.documentElement.lang = next === "es" ? "es" : "en";
+          }
+          return { language: next };
+        }),
     }),
     {
       name: "elemental-language",
       partialize: (state) => ({ language: state.language }),
+      onRehydrateStorage: () => (state) => {
+        // Sync <html lang> when state is rehydrated from localStorage
+        if (state && typeof document !== "undefined") {
+          document.documentElement.lang =
+            state.language === "es" ? "es" : "en";
+        }
+      },
     }
   )
 );

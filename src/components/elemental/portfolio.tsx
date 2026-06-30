@@ -64,8 +64,17 @@ export function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#333333] bg-[#1a1a1a] transition-all duration-300 hover:border-[#c8d400]/50 hover:bg-[#262626]"
+                role="button"
+                tabIndex={0}
+                aria-label={`${c.title} — ${c.category}. ${t.common.languageLabel === "Language" ? "Press Enter to view details" : "Presiona Enter para ver detalles"}`}
+                className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-[#333333] bg-[#1a1a1a] transition-all duration-300 hover:border-[#c8d400]/50 hover:bg-[#262626] focus:outline-none focus:ring-2 focus:ring-[#c8d400] focus:ring-offset-2 focus:ring-offset-[#0d0d0d]"
                 onClick={() => setOpenIndex(i)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setOpenIndex(i);
+                  }
+                }}
               >
                 {/* Header strip */}
                 <div className="relative flex items-center justify-between border-b border-[#333333] px-6 py-4">

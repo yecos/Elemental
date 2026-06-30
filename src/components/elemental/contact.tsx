@@ -72,7 +72,9 @@ export function Contact() {
       action: {
         label: c.info.whatsappButton,
         href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-          "Hola ELEMENTAL, quiero agendar un diagnóstico."
+          t.common.languageLabel === "Language"
+            ? "Hi ELEMENTAL, I'd like to schedule a free diagnostic."
+            : "Hola ELEMENTAL, quiero agendar un diagnóstico gratuito."
         )}`,
       },
     },

@@ -15,7 +15,7 @@ export default function Home() {
       style={{ backgroundColor: "#0d0d0d" }}
     >
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <Hero />
         <Services />
         <AiAutomation />

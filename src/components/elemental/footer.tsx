@@ -26,17 +26,19 @@ export function Footer() {
     {
       icon: Instagram,
       label: "Instagram",
-      href: "https://instagram.com",
+      href: "https://instagram.com/elemental.co",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://linkedin.com/company/elemental-co",
     },
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      href: `https://wa.me/${WHATSAPP_NUMBER}`,
+      href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        "Hola ELEMENTAL, quiero agendar un diagnóstico gratuito."
+      )}`,
     },
   ];
 

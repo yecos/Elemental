@@ -306,36 +306,42 @@ export const dictionary = {
           title: "5 prompts de IA para vender más en WhatsApp",
           excerpt:
             "Plantillas probadas para responder, calificar y cerrar ventas desde WhatsApp usando un agente de IA.",
+          body: "Un agente de IA en WhatsApp bien entrenado convierte cada conversación en una oportunidad de venta. Estos son 5 prompts que usamos en ELEMENTAL: 1) Clasificador de intención: detecta si el cliente consulta, compra o se queja. 2) Generador de respuesta empática: responde con tono consultivo, no robótico. 3) Calificador de presupuesto: pregunta sutilmente el rango sin ser invasivo. 4) Creador de cotización: arma una propuesta en segundos con los datos del CRM. 5) Detector de urgencia: identifica señales de compra inmediata y deriva a un humano. Implementar estos prompts con un agente IA reduce el tiempo de respuesta de horas a segundos y aumenta la conversión hasta 60%. La clave no es la tecnología, es el diseño del flujo.",
         },
         {
           category: "Automatización",
           title: "Cómo automatizar cotizaciones sin perder el toque humano",
           excerpt:
             "El equilibrio entre velocidad y personalización. Diseño de flujos que parecen hechos a mano.",
+          body: "La trampa de la automatización es sonar como robot. La solución no es menos IA, es mejor diseño del flujo. Reglas que aplicamos: 1) La IA arma la primera versión de la cotización, un humano la revisa en 30 segundos. 2) El email se envía con el nombre del asesor, no con 'Equipo Comercial'. 3) Se incluye una pregunta abierta al final para invitar a responder. 4) El seguimiento lo hace la IA pero con contexto de la conversación previa. 5) Si el cliente responde con duda o queja, se deriva inmediatamente a humano. Con este sistema, una empresa de servicios B2B redujo el tiempo de cotización de 3 días a 3 minutos y aumentó conversión 60%. El toque humano no está en escribir cada palabra, está en diseñar el momento correcto donde el humano aparece.",
         },
         {
           category: "Datos",
           title: "Dashboards comerciales: qué medir en 2026",
           excerpt:
             "Los indicadores que de verdad importan para tomar decisiones y dejar de mirar vanity metrics.",
+          body: "La mayoría de dashboards comerciales muestran muchas métricas y pocas decisiones. En 2026, los indicadores que de verdad importan son: 1) Tiempo de respuesta a lead (objetivo: < 5 min). 2) Tasa de calificación automática (cuántos leads la IA filtra sin humano). 3) Costo por lead calificado, no costo por lead crudo. 4) Tiempo promedio de cotización. 5) Conversión por asesor y por canal. 6) ROI de automatizaciones activas. 7) NPS de atención post-venta. Las vanity metrics (likes, seguidores, impresiones) solo sirven para inflar egos. Un dashboard útil es aquel donde cada número te obliga a tomar una decisión: contratar, capacitar, automatizar o matar un canal. Si una métrica no genera acción, la quitas del dashboard.",
         },
         {
           category: "Estrategia",
           title: "Errores comunes al implementar IA en PYMES",
           excerpt:
             "Las trampas más frecuentes cuando una PYME adopta IA y cómo evitarlas desde el diseño.",
+          body: "Implementar IA en una PYMES parece fácil hasta que lo intentas. Los 5 errores más comunes que vemos: 1) Empezar por la tecnología, no por el problema. Comprar ChatGPT API sin saber qué proceso automatizar. 2) No tener datos limpios. La IA es tan buena como sus datos de entrenamiento. Si tu CRM es un caos, el agente IA será un caos con luces. 3) Capacitación insuficiente del equipo. Si los empleados no entienden cómo hablar con el agente IA, lo boicotean. 4) No medir resultados. Sin métricas claras, no sabes si la IA está ahorrando tiempo o creando problemas. 5) Querer automatizar todo de golpe. La automatización es un músculo que se entrena. Empieza por una tarea repetitiva, mide, aprende, escala. La regla: si un humano tarda más de 5 minutos en una tarea y la hace 10 veces al día, es candidata a IA.",
         },
         {
           category: "Elemental",
           title: "De agencia a consultora: la transformación de ELEMENTAL",
           excerpt:
             "Por qué dejamos de vender campañas sueltas y empezamos a construir sistemas de crecimiento.",
+          body: "Durante años operamos como agencia: vendíamos piezas sueltas, campañas, diseños. Funcionaba, pero los clientes se iban cuando terminaba el proyecto. No había retención ni profundidad. Decidimos transformarnos en consultora creativo-tecnológica por tres razones: 1) Las empresas ya no necesitan más piezas, necesitan sistemas que vendan solos. 2) La IA cambió las reglas: lo que antes tomaba un mes ahora toma una semana. 3) El valor ya no está en el entregable, está en el resultado medible. Hoy no vendemos 'una landing page', vendemos 'un sistema que captura, califica y convierte leads 24/7'. No vendemos 'gestión de redes', vendemos 'máquina de contenido que alimenta tu embudo comercial'. La diferencia semántica es enorme. La diferencia operativa es brutal. La diferencia en resultados es lo único que importa.",
         },
         {
           category: "Casos",
           title: "3 empresas que automatizaron su operación",
           excerpt:
             "Historias reales de restaurantes, constructoras y servicios que redujeron costos con IA.",
+          body: "Tres casos reales de empresas que transformaron su operación con IA: 1) Restaurante de cocina autor en Bogotá: perdió 180 reservas en 2 meses por demoras en WhatsApp. Implementamos agente IA que responde en segundos, agenda reservas y recuerda confirmaciones. Resultado: +180% reservas online, -65% tiempo de respuesta, +45% clientes recurrentes. 2) Constructora mediana en Medellín: perdían 60% de leads porque cada asesor hacía preguntas distintas y no había seguimiento. Desplegamos landing por proyecto + CRM + IA que califica leads por presupuesto y zona. Resultado: 320 leads/mes, 78% calificación automática, -42% costo por lead. 3) Empresa de servicios técnicos B2B en Cali: cada cotización tomaba 3 días porque requería revisión de 3 áreas. Implementamos IA que genera cotizaciones en segundos + dashboard en vivo. Resultado: -85% tiempo de cotización, +60% conversión, atención 24/7. El patrón: el problema nunca es la pieza, es el sistema. Cuando diseñamos sistemas integrados, los resultados son medibles y sostenibles.",
         },
       ],
       readMore: "Leer más",
@@ -661,7 +667,7 @@ export const dictionary = {
       placeholders: {
         name: "Your name",
         company: "Your company name",
-        whatsapp: "+1 555 000 0000",
+        whatsapp: "+57 301 4069793",
         email: "you@company.com",
       },
       next: "Continue",
@@ -692,36 +698,42 @@ export const dictionary = {
           title: "5 AI prompts to sell more on WhatsApp",
           excerpt:
             "Tested templates to reply, qualify and close sales from WhatsApp using an AI agent.",
+          body: "A well-trained WhatsApp AI agent turns every conversation into a sales opportunity. Here are 5 prompts we use at ELEMENTAL: 1) Intent classifier: detects if the customer is asking, buying or complaining. 2) Empathetic response generator: responds with a consultative tone, not robotic. 3) Budget qualifier: subtly asks for the range without being invasive. 4) Quote creator: builds a proposal in seconds using CRM data. 5) Urgency detector: identifies immediate purchase signals and routes to a human. Implementing these prompts with an AI agent reduces response time from hours to seconds and increases conversion up to 60%. The key is not the technology, it's the flow design.",
         },
         {
           category: "Automation",
           title: "How to automate quotes without losing the human touch",
           excerpt:
             "The balance between speed and personalization. Flow design that feels handmade.",
+          body: "The trap of automation is sounding like a robot. The solution is not less AI, it's better flow design. Rules we apply: 1) The AI builds the first version of the quote, a human reviews it in 30 seconds. 2) The email is sent with the advisor's name, not 'Commercial Team'. 3) An open question is included at the end to invite a reply. 4) Follow-up is done by AI but with context from the previous conversation. 5) If the customer responds with a doubt or complaint, it's immediately routed to a human. With this system, a B2B services company reduced quote time from 3 days to 3 minutes and increased conversion 60%. The human touch is not in writing every word, it's in designing the right moment when the human appears.",
         },
         {
           category: "Data",
           title: "Commercial dashboards: what to measure in 2026",
           excerpt:
             "The indicators that truly matter to make decisions and stop staring at vanity metrics.",
+          body: "Most commercial dashboards show many metrics and few decisions. In 2026, the indicators that truly matter are: 1) Lead response time (target: < 5 min). 2) Automatic qualification rate (how many leads the AI filters without a human). 3) Cost per qualified lead, not cost per raw lead. 4) Average quote time. 5) Conversion per advisor and per channel. 6) ROI of active automations. 7) Post-sale NPS. Vanity metrics (likes, followers, impressions) only serve to inflate egos. A useful dashboard is one where each number forces you to make a decision: hire, train, automate or kill a channel. If a metric doesn't drive action, remove it from the dashboard.",
         },
         {
           category: "Strategy",
           title: "Common mistakes when implementing AI in SMBs",
           excerpt:
             "The most frequent traps when an SMB adopts AI and how to avoid them from the design phase.",
+          body: "Implementing AI in an SMB seems easy until you try it. The 5 most common mistakes we see: 1) Starting with technology, not the problem. Buying ChatGPT API without knowing which process to automate. 2) Not having clean data. AI is only as good as its training data. If your CRM is chaos, the AI agent will be chaos with lights. 3) Insufficient team training. If employees don't understand how to talk to the AI agent, they sabotage it. 4) Not measuring results. Without clear metrics, you don't know if AI is saving time or creating problems. 5) Wanting to automate everything at once. Automation is a muscle you train. Start with one repetitive task, measure, learn, scale. The rule: if a human takes more than 5 minutes on a task and does it 10 times a day, it's a candidate for AI.",
         },
         {
           category: "Elemental",
           title: "From agency to consultancy: ELEMENTAL's transformation",
           excerpt:
             "Why we stopped selling one-off campaigns and started building growth systems.",
+          body: "For years we operated as an agency: we sold one-off pieces, campaigns, designs. It worked, but clients left when the project ended. No retention, no depth. We decided to transform into a creative-tech consultancy for three reasons: 1) Companies no longer need more pieces, they need systems that sell on their own. 2) AI changed the rules: what used to take a month now takes a week. 3) The value is no longer in the deliverable, it's in the measurable result. Today we don't sell 'a landing page', we sell 'a system that captures, qualifies and converts leads 24/7'. We don't sell 'social media management', we sell 'a content machine that feeds your sales funnel'. The semantic difference is huge. The operational difference is brutal. The difference in results is all that matters.",
         },
         {
           category: "Cases",
           title: "3 companies that automated their operation",
           excerpt:
             "Real stories of restaurants, construction and services companies that cut costs with AI.",
+          body: "Three real cases of companies that transformed their operations with AI: 1) Author cuisine restaurant in Bogota: lost 180 reservations in 2 months due to WhatsApp delays. We implemented an AI agent that responds in seconds, schedules reservations and reminds confirmations. Result: +180% online reservations, -65% response time, +45% recurring customers. 2) Mid-size construction company in Medellin: lost 60% of leads because each advisor asked different questions and there was no follow-up. We deployed landing per project + CRM + AI that qualifies leads by budget and zone. Result: 320 leads/month, 78% automatic qualification, -42% cost per lead. 3) B2B technical services company in Cali: each quote took 3 days because it required review from 3 areas. We implemented AI that generates quotes in seconds + live dashboard. Result: -85% quote time, +60% conversion, 24/7 support. The pattern: the problem is never the piece, it's the system. When we design integrated systems, results are measurable and sustainable.",
         },
       ],
       readMore: "Read more",
