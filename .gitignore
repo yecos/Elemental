@@ -69,3 +69,4 @@ db/*.db-journal
 /.z-ai-config/
 /.zscripts/
 .env
+tool-results/
