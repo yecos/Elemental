@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LanguageToggle } from "./language-toggle";
 import { MobileMenu } from "./mobile-menu";
@@ -81,13 +80,10 @@ export function Header() {
           className="group flex items-center gap-2"
           aria-label="ELEMENTAL — Inicio"
         >
-          <Image
-            src="/logo_white_on_black.png"
+          <img
+            src="/logo.svg"
             alt="ELEMENTAL"
-            width={140}
-            height={48}
-            className="h-8 w-auto transition-transform group-hover:scale-105 sm:h-9"
-            priority
+            className="h-9 w-auto transition-transform group-hover:scale-105 sm:h-11"
           />
         </button>
 

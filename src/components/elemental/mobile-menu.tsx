@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -57,12 +56,10 @@ export function MobileMenu() {
       >
         <SheetHeader className="px-0 pt-2">
           <SheetTitle className="text-left">
-            <Image
-              src="/logo_white_on_black.png"
+            <img
+              src="/logo.svg"
               alt="ELEMENTAL"
-              width={150}
-              height={50}
-              className="h-9 w-auto"
+              className="h-10 w-auto"
             />
           </SheetTitle>
         </SheetHeader>

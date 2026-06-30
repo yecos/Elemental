@@ -1,4 +1,11 @@
-<svg width="220" height="40" viewBox="0 0 220 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="29" font-family="'Space Grotesk', system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" fill="#FFFFFF">ELEMENTAL</text>
-  <circle cx="204" cy="22" r="4" fill="#C8D400"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <!-- Isotipo: hexágono con símbolo geométrico -->
+  <g transform="translate(0, 4)">
+    <!-- Hexágono outline lima -->
+    <polygon points="46,4 84,26 84,70 46,92 8,70 8,26" fill="none" stroke="#C8D400" stroke-width="4.5" stroke-linejoin="round"/>
+    <!-- Símbolo geométrico tipo "H" estilizado -->
+    <path d="M30 30 L30 64 M30 47 L62 47 M62 30 L62 64" stroke="#C8D400" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- Wordmark ELEMENTAL — todo en lima, sin separación visual -->
+  <text x="108" y="66" font-family="'Space Grotesk', 'Arial Black', 'Helvetica', sans-serif" font-size="42" font-weight="900" fill="#C8D400" letter-spacing="3">ELEMENTAL</text>
 </svg>

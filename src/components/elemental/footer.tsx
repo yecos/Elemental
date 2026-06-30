@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { useT } from "@/lib/language-store";
 
@@ -52,12 +51,10 @@ export function Footer() {
               className="flex items-center gap-2"
               aria-label="ELEMENTAL — Inicio"
             >
-              <Image
-                src="/logo_white_on_black.png"
+              <img
+                src="/logo.svg"
                 alt="ELEMENTAL"
-                width={150}
-                height={50}
-                className="h-9 w-auto"
+                className="h-11 w-auto"
               />
             </button>
             <p className="mt-4 max-w-sm font-display text-lg font-medium text-[#c8d400]">
