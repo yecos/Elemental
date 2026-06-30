@@ -59,3 +59,13 @@ server.log
 /worklog.md
 db/*.db
 db/*.db-journal
+
+# Sandbox / dev environment
+/zscripts/
+/.zscripts/
+/Caddyfile
+/examples/
+/mini-services/
+/.z-ai-config/
+/.zscripts/
+.env
