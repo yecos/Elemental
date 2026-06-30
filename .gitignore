@@ -57,3 +57,5 @@ server.log
 /scripts/
 /upload/
 /worklog.md
+db/*.db
+db/*.db-journal
