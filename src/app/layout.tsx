@@ -25,6 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://localhost:3000"
+  ),
   title: "ELEMENTAL · Consultora de crecimiento digital impulsada por IA",
   description:
     "Construimos sistemas digitales que hacen crecer empresas. Branding, marketing, desarrollo web, IA y automatización. Diseño. Tecnología. Inteligencia.",
