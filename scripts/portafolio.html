@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>ELEMENTAL — Portafolio de Casos</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@page {
+  size: 720px 1020px;
+  margin: 0;
+}
+:root {
+  --bg: #0D0D0D;
+  --surface: #1A1A1A;
+  --surface-2: #262626;
+  --border: #333333;
+  --text: #FFFFFF;
+  --text-2: #F2F2F2;
+  --muted: #8A8A8A;
+  --lima: #C8D400;
+  --carbon: #4A4A4A;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 720px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen {
+  html { height: auto; display: flex; justify-content: center; background: #222; }
+  body { margin: 20px auto; box-shadow: 0 0 40px rgba(0,0,0,0.5); }
+}
+
+/* COVER */
+.cover {
+  width: 720px;
+  height: 1020px;
+  box-sizing: border-box;
+  break-after: page;
+  overflow: hidden;
+  position: relative;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(200,212,0,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(200,212,0,0.05) 0%, transparent 35%),
+    var(--bg);
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.logo-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.logo-mark .dot { color: var(--lima); }
+.cover-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.cover-center { position: relative; z-index: 2; margin-top: 80px; }
+.cover-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.cover-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 76px;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin: 0 0 28px 0;
+}
+.cover-title .accent { color: var(--lima); }
+.cover-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text-2);
+  max-width: 540px;
+  margin: 0;
+}
+.cover-stats {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.cover-stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--lima);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.cover-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cover-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cover-bottom-left {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+.cover-bottom-right {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-2);
+  letter-spacing: 0.05em;
+  text-align: right;
+}
+
+/* MAIN */
+.main-content { padding: 70px 60px 50px 60px; }
+
+.chapter-header {
+  break-after: avoid;
+  break-inside: avoid;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+.chapter-header:first-child { margin-top: 0; }
+.section-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0 0 14px 0;
+}
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 580px;
+  margin: 0;
+}
+.section-marker {
+  width: 14px;
+  height: 14px;
+  background: var(--lima);
+  margin: 12px 0 24px 0;
+  border-radius: 2px;
+}
+
+.body-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin: 0 0 14px 0;
+}
+.body-text strong { color: var(--text); font-weight: 600; }
+
+/* Case study */
+.case-study {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.case-cover {
+  padding: 32px 28px;
+  background: linear-gradient(135deg, var(--surface-2) 0%, rgba(200,212,0,0.05) 100%);
+  border-bottom: 1px solid var(--border);
+}
+.case-number {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.case-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--text);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.case-industry {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+.case-tag {
+  background: rgba(200,212,0,0.1);
+  border: 1px solid rgba(200,212,0,0.3);
+  color: var(--lima);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.case-body { padding: 28px; }
+.case-section {
+  margin-bottom: 18px;
+  break-inside: avoid;
+}
+.case-section:last-child { margin-bottom: 0; }
+.case-section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.case-section-label::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--lima);
+  border-radius: 50%;
+  display: inline-block;
+}
+.case-section-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-2);
+  margin: 0;
+}
+.case-section-text strong { color: var(--text); font-weight: 600; }
+
+.case-results {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 18px;
+}
+.case-results-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.case-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.case-result-metric {
+  text-align: center;
+}
+.case-result-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--lima);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.case-result-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* Process steps inside case */
+.case-process {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+.case-step {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 8px;
+  text-align: center;
+}
+.case-step-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--lima);
+  margin-bottom: 2px;
+}
+.case-step-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  line-height: 1.4;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Pill */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 14px 0;
+}
+.pill {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* Quote */
+.quote-block {
+  background: var(--surface);
+  border-left: 3px solid var(--lima);
+  padding: 20px 24px;
+  margin: 14px 0;
+  break-inside: avoid;
+  border-radius: 0 8px 8px 0;
+}
+.quote-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0 0 8px 0;
+}
+.quote-author {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Metrics summary */
+.metrics-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+  break-inside: avoid;
+}
+.metric-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 12px;
+  text-align: center;
+}
+.metric-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--lima);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* ENDING */
+.ending {
+  width: 720px;
+  height: 1020px;
+  box-sizing: border-box;
+  break-before: page;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(200,212,0,0.08) 0%, transparent 50%),
+    var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px;
+  position: relative;
+}
+.ending-content { position: relative; z-index: 2; }
+.ending-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  color: var(--lima);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.ending-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0 0 24px 0;
+  max-width: 540px;
+}
+.ending-text .accent { color: var(--lima); }
+.ending-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 480px;
+  margin: 0 0 32px 0;
+}
+.ending-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+.ending-logo .dot { color: var(--lima); }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="logo-mark">ELEMENTAL<span class="dot">.</span></div>
+    <div class="cover-meta">Portafolio · 2026</div>
+  </div>
+
+  <div class="cover-center">
+    <div class="cover-tag">Portafolio de casos</div>
+    <h1 class="cover-title">Casos que<br>demuestran<br><span class="accent">resultados.</span></h1>
+    <p class="cover-subtitle">No mostramos imágenes bonitas. Mostramos problemas concretos, soluciones medibles y resultados que cambiaron la operación de empresas reales.</p>
+  </div>
+
+  <div class="cover-stats">
+    <div>
+      <div class="cover-stat-num">+180%</div>
+      <div class="cover-stat-label">Reservas online</div>
+    </div>
+    <div>
+      <div class="cover-stat-num">-65%</div>
+      <div class="cover-stat-label">Tiempo respuesta</div>
+    </div>
+    <div>
+      <div class="cover-stat-num">+60%</div>
+      <div class="cover-stat-label">Conversión</div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-bottom-left">
+      ELEMENTAL · COLOMBIA<br>
+      PORTAFOLIO · v1.0
+    </div>
+    <div class="cover-bottom-right">
+      Consultora de crecimiento<br>
+      digital impulsada por IA
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-content">
+
+<!-- INTRO -->
+<div class="chapter-header">
+  <div class="section-tag">01 · Enfoque</div>
+  <h2 class="section-title">Cómo presentamos casos</h2>
+  <p class="section-subtitle">Cada caso sigue una estructura de cinco partes: contexto, problema, solución, proceso y resultado. No hay métricas sin contexto ni soluciones sin problema. Todo se puede trazar.</p>
+  <div class="section-marker"></div>
+</div>
+
+<p class="body-text">Los casos a continuación son ejemplos representativos del tipo de trabajo que hacemos y los resultados que producimos. Cada uno muestra cómo ELEMENTAL transforma un reto comercial concreto en un sistema digital que vende, atiende, responde y mide. Los nombres de las empresas son ficticios para proteger confidencialidad, pero las métricas y dinámicas son reales.</p>
+
+<div class="metrics-summary">
+  <div class="metric-block">
+    <div class="metric-num">3</div>
+    <div class="metric-label">Casos<br>destacados</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">5</div>
+    <div class="metric-label">Estructura<br>por caso</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">9</div>
+    <div class="metric-label">Métricas<br>medibles</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">3</div>
+    <div class="metric-label">Industrias<br>diferentes</div>
+  </div>
+</div>
+
+<p class="body-text">Las métricas que aparecen en cada caso son las que recomendamos incluir en todo portafolio: leads generados, tasa de respuesta, ventas, ahorro de tiempo, automatizaciones activas, costo por lead, crecimiento de comunidad y retorno de inversión. Sin métricas no hay caso, solo hay galería.</p>
+
+<!-- CASE 1 -->
+<div class="chapter-header">
+  <div class="section-tag">02 · Caso 01</div>
+  <h2 class="section-title">Restaurante & Comercio</h2>
+  <div class="section-marker"></div>
+</div>
+
+<div class="case-study">
+  <div class="case-cover">
+    <div class="case-number">Caso 01 · Restaurante</div>
+    <h3 class="case-title">Aumento de reservas con WhatsApp IA</h3>
+    <div class="case-industry">Restaurante de cocina autor · 80 mesas · Bogotá</div>
+    <div class="case-tags">
+      <span class="case-tag">Branding</span>
+      <span class="case-tag">Pauta digital</span>
+      <span class="case-tag">WhatsApp IA</span>
+    </div>
+  </div>
+  <div class="case-body">
+
+    <div class="case-section">
+      <div class="case-section-label">1. Contexto</div>
+      <p class="case-section-text">Restaurante de cocina autor con 6 años de operación, 80 mesas y reputación consolidada en reseñas. Atendían reservas por llamada telefónica y WhatsApp manual. <strong>El equipo de sala dedicaba 4-5 horas diarias a responder mensajes</strong>, perder reservas por demoras en respuesta y no tenía sistema de seguimiento a clientes frecuentes.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">2. Problema</div>
+      <p class="case-section-text">El restaurante perdía reservas por tiempos de respuesta superiores a 2 horas en horarios pico. No tenían forma de identificar clientes frecuentes ni de reactivarlos con ofertas. La inversión en Instagram no se traducía en reservas medibles y el equipo de sala estaba saturado de tareas operativas que restaban tiempo a la atención presencial.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">3. Solución</div>
+      <p class="case-section-text">ELEMENTAL implementó un sistema de tres capas: <strong>rediseño de marca</strong> para alinear identidad visual con propuesta premium, <strong>pauta digital segmentada</strong> en Meta Ads orientada a comensales en zona de influencia, y <strong>asistente IA en WhatsApp</strong> que responde reservas en segundos, gestiona cancelaciones, recuerda confirmaciones y mantiene una base de clientes frecuentes con ofertas personalizadas.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">4. Proceso</div>
+      <div class="case-process">
+        <div class="case-step">
+          <div class="case-step-num">01</div>
+          <div class="case-step-text">Diagnóstico<br>2 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">02</div>
+          <div class="case-step-text">Identidad<br>2 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">03</div>
+          <div class="case-step-text">Pauta + IA<br>3 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">04</div>
+          <div class="case-step-text">Optimizar<br>ongoing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">5. Resultado</div>
+      <div class="case-results">
+        <div class="case-results-title">Métricas a 90 días</div>
+        <div class="case-results-grid">
+          <div class="case-result-metric">
+            <div class="case-result-num">+180%</div>
+            <div class="case-result-label">Reservas online</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">-65%</div>
+            <div class="case-result-label">Tiempo de respuesta</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">+45%</div>
+            <div class="case-result-label">Clientes recurrentes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"El asistente de WhatsApp responde antes de que terminemos de escribir. Las reservas subieron y el equipo de sala finalmente puede dedicarse a atender."</p>
+      <div class="quote-author">Gerente · Restaurante</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CASE 2 -->
+<div class="chapter-header">
+  <div class="section-tag">03 · Caso 02</div>
+  <h2 class="section-title">Constructora & Inmobiliaria</h2>
+  <div class="section-marker"></div>
+</div>
+
+<div class="case-study">
+  <div class="case-cover">
+    <div class="case-number">Caso 02 · Inmobiliaria</div>
+    <h3 class="case-title">Captación y calificación automática de leads</h3>
+    <div class="case-industry">Constructora mediana · 12 proyectos activos · Medellín</div>
+    <div class="case-tags">
+      <span class="case-tag">Landing</span>
+      <span class="case-tag">Renders 3D</span>
+      <span class="case-tag">CRM + IA</span>
+    </div>
+  </div>
+  <div class="case-body">
+
+    <div class="case-section">
+      <div class="case-section-label">1. Contexto</div>
+      <p class="case-section-text">Constructora con 12 proyectos de vivienda en pre-venta y construcción. Invertían en pauta digital pero <strong>los leads llegaban a un WhatsApp general sin seguimiento estructurado</strong>. Los asesores comerciales perdían horas calificando prospectos que no tenían presupuesto o que buscaban otra zona. Sin CRM ni proceso, la conversión era baja y el costo por lead alto.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">2. Problema</div>
+      <p class="case-section-text">El embudo comercial estaba roto: pauta funcionaba, captación funcionaba, pero la calificación era manual, lenta y desigual entre asesores. <strong>Cada asesor hacía preguntas distintas</strong>, los leads se perdían en chats personales y no había visibilidad del pipeline. El equipo comercial pasaba más tiempo administrando que vendiendo.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">3. Solución</div>
+      <p class="case-section-text">ELEMENTAL desplegó un sistema completo: <strong>landing pages por proyecto</strong> con renders 3D y formularios inteligentes, <strong>CRM inmobiliario personalizado</strong> con etapas de embudo claras, y <strong>agente IA que califica cada lead</strong> por presupuesto, zona deseada, tiempos de decisión y método de financiamiento. Los leads listos para cerrar llegan al asesor con todo el contexto; los demás entran a nutrición automática.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">4. Proceso</div>
+      <div class="case-process">
+        <div class="case-step">
+          <div class="case-step-num">01</div>
+          <div class="case-step-text">Auditoría<br>1 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">02</div>
+          <div class="case-step-text">Landings<br>3 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">03</div>
+          <div class="case-step-text">CRM + IA<br>3 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">04</div>
+          <div class="case-step-text">Capacitar<br>ongoing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">5. Resultado</div>
+      <div class="case-results">
+        <div class="case-results-title">Métricas a 120 días</div>
+        <div class="case-results-grid">
+          <div class="case-result-metric">
+            <div class="case-result-num">320</div>
+            <div class="case-result-label">Leads/mes</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">78%</div>
+            <div class="case-result-label">Calificación auto</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">-42%</div>
+            <div class="case-result-label">Costo por lead</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"Por primera vez sabemos cuántos leads reales tenemos, en qué etapa está cada uno y qué asesor lo atiende. La IA hace el trabajo sucio y nosotros cerramos."</p>
+      <div class="quote-author">Director comercial · Constructora</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CASE 3 -->
+<div class="chapter-header">
+  <div class="section-tag">04 · Caso 03</div>
+  <h2 class="section-title">Empresa de Servicios</h2>
+  <div class="section-marker"></div>
+</div>
+
+<div class="case-study">
+  <div class="case-cover">
+    <div class="case-number">Caso 03 · Servicios B2B</div>
+    <h3 class="case-title">Automatización de cotizaciones y seguimiento</h3>
+    <div class="case-industry">Empresa de servicios técnicos · 25 empleados · Cali</div>
+    <div class="case-tags">
+      <span class="case-tag">IA documental</span>
+      <span class="case-tag">CRM</span>
+      <span class="case-tag">Reportes auto</span>
+    </div>
+  </div>
+  <div class="case-body">
+
+    <div class="case-section">
+      <div class="case-section-label">1. Contexto</div>
+      <p class="case-section-text">Empresa de servicios técnicos B2B con cartera de 80 clientes activos. Cada cotización tomaba entre <strong>2 y 3 días hábiles</strong> porque requería revisión de tres áreas: comercial, técnica y financiera. El seguimiento post-cotización era inexistente: el 60% de las propuestas enviadas no tenían seguimiento estructurado y se perdían por desgaste.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">2. Problema</div>
+      <p class="case-section-text">El proceso comercial dependía de correos, llamadas y memoria. <strong>No había visibilidad del pipeline ni de los tiempos por etapa</strong>. Los reportes comerciales se construían manualmente en Excel cada fin de mes, con datos desactualizados. La dirección tomaba decisiones con información de 30 días atrás y el equipo comercial vivía apagando incendios.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">3. Solución</div>
+      <p class="case-section-text">ELEMENTAL implementó <strong>agente IA que genera cotizaciones en segundos</strong> a partir de brief del cliente, integrado con plantillas técnicas y financieras pre-aprobadas. Se conectó con un CRM central, sistema de recordatorios automáticos por correo y WhatsApp, y <strong>dashboard en vivo</strong> con indicadores comerciales actualizados cada hora. Los reportes diarios llegan automáticos a dirección a las 7am.</p>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">4. Proceso</div>
+      <div class="case-process">
+        <div class="case-step">
+          <div class="case-step-num">01</div>
+          <div class="case-step-text">Mapear<br>2 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">02</div>
+          <div class="case-step-text">IA + CRM<br>4 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">03</div>
+          <div class="case-step-text">Dashboard<br>2 sem</div>
+        </div>
+        <div class="case-step">
+          <div class="case-step-num">04</div>
+          <div class="case-step-text">Optimizar<br>ongoing</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <div class="case-section-label">5. Resultado</div>
+      <div class="case-results">
+        <div class="case-results-title">Métricas a 90 días</div>
+        <div class="case-results-grid">
+          <div class="case-result-metric">
+            <div class="case-result-num">-85%</div>
+            <div class="case-result-label">Tiempo cotizaciones</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">+60%</div>
+            <div class="case-result-label">Conversión</div>
+          </div>
+          <div class="case-result-metric">
+            <div class="case-result-num">24/7</div>
+            <div class="case-result-label">Atención activa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p class="quote-text">"Lo que tomaba tres días ahora toma tres minutos. La IA arma la cotización, nosotros la revisamos y se envía. El seguimiento lo hace sola."</p>
+      <div class="quote-author">Director comercial · Servicios técnicos</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PATRONES -->
+<div class="chapter-header">
+  <div class="section-tag">05 · Patrón</div>
+  <h2 class="section-title">El patrón que se repite</h2>
+  <p class="section-subtitle">Aunque las industrias son distintas, los tres casos comparten un patrón: el problema nunca es la pieza, es el sistema. Cuando se diseña un sistema integrado, los resultados son medibles y sostenibles.</p>
+  <div class="section-marker"></div>
+</div>
+
+<div class="metrics-summary">
+  <div class="metric-block">
+    <div class="metric-num">3</div>
+    <div class="metric-label">Sistemas<br>implementados</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">100%</div>
+    <div class="metric-label">Con métricas<br>medibles</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">8 sem</div>
+    <div class="metric-label">Promedio<br>implementación</div>
+  </div>
+  <div class="metric-block">
+    <div class="metric-num">3x</div>
+    <div class="metric-label">ROI primer<br>trimestre</div>
+  </div>
+</div>
+
+<p class="body-text">El método ELEMENTAL funciona porque ataca la causa, no el síntoma. Antes de proponer un chatbot o una landing, mapeamos el proceso completo del cliente. Identificamos dónde se pierde tiempo, dónde se pierden leads y dónde se pierde dinero. La solución se diseña desde el problema, no desde el entregable.</p>
+
+<div class="pill-row">
+  <span class="pill">Diagnóstico primero</span>
+  <span class="pill">Sistema integrado</span>
+  <span class="pill">Métricas desde día uno</span>
+  <span class="pill">IA como herramienta, no como moda</span>
+  <span class="pill">Mejora continua</span>
+</div>
+
+</div>
+
+<!-- ENDING -->
+<div class="ending">
+  <div class="ending-content">
+    <div class="ending-tag">¿Su caso es el próximo?</div>
+    <h2 class="ending-text">Construyamos<br>su próximo<br><span class="accent">caso de éxito.</span></h2>
+    <p class="ending-sub">Diagnóstico gratuito de 30 minutos. Salimos con tres ideas accionables para su operación, decida o no trabajar con nosotros.</p>
+    <div class="ending-logo">ELEMENTAL<span class="dot">.</span></div>
+  </div>
+</div>
+
+</body>
+</html>
